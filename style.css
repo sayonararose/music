@@ -73,6 +73,11 @@ th, td {
     font-size: 20px;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
  /* Контекстний селектор */
  .navbar a {
     color: white;
