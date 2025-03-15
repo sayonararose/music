@@ -7,51 +7,80 @@
     <meta name="description" content="Головна сторінка сайту музичних альбомів">
     <link rel="stylesheet" href="style.css">
     <title>home</title>
+    <style>
+        p#welcome-message{
+            font-size: 25px !important;
+            margin-left: 40px !important; 
+        }
+
+        a.album-link{
+            color: rgb(122, 37, 37)!important;
+            font-weight: bold !important;
+        }
+
+        a.album-link:hover{
+            color: rgb(202, 38, 38) !important;
+        }
+    </style>
 </head>
 <body>
-    <a href="index.html"><img src="img/logo_bordo.png" alt="Логотип"></a>
-    <a href="#bottom" style="color: rgb(205, 120, 245); font-size: 20px;">Тицни мене!</a>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo_bordo.png" alt="Логотип-навігація"></a>
+        </div>
+        <ul class="nav-list">
+            <li><a href="music.html">Альбоми</a></li>
+            <li><a href="merch.html">Мерч</a></li>
+            <li><a href="preview.html">Анонси</a></li>
+        </ul>
+    </nav>
+    
+    <a href="#bottom" class="special-link">Тицни мене!</a>
 
-    <!-- Маркований список з поосиланням на сторінки  -->
-    <ul style="color: rgb(122, 37, 37);">
-        <li><a href="music.html" style="color: white; font-size: 30px;">Альбоми</a></li>
-        <li><a href="merch.html" style="color: white; font-size: 30px;">Мерч</a></li>
-        <li><a href="preview.html" style="color: white; font-size: 30px;">Анонси</a></li>
-    </ul>
-
-    <p><font color="white" size="5" face="Verdana">Музика – це більше, ніж просто звук. Це історії, емоції та спогади, які ми зберігаємо разом із улюбленими <a href="music.html" style="color: rgb(122, 37, 37);;">альбомами.</a><br>
-        Тут зібрані культові та нові альбоми, які заслуговують на увагу кожного меломана. <br>
+    <p id="welcome-message">Музика – це більше, ніж просто звук. Це історії, емоції та спогади, які ми зберігаємо разом із улюбленими <a href="music.html" class="album-link">альбомами.</a> <br>
+        Тут зібрані культові та нові альбоми, які заслуговують на увагу кожного меломана.
         Обирай свою улюблену музику та занурюйся у світ якісного звучання!
-    </font>
     </p>
 
-    <h2><font color="white" size="6" face="Verdana">Цього тижня популярні</font></h2>
-    <h3><font color="white" size="5" face="Verdana">Жанри</font></h3>
+    <h1>Цього тижня популярні</h1>
+    <h2>Жанри</h2>
     <!-- Нумерований список -->
     <ol>
-        <li style="color: white; font-size: 25px;">K-pop</li>
-        <li style="color:white; font-size: 25px;">Джаз</li>
-        <li style="color:white; font-size: 25px;">Метал</li>
-        <li style="color:white; font-size: 25px;">Кантрі</li>
+        <li>K-pop</li>
+        <li>Джаз</li>
+        <li>Метал</li>
+        <li>Кантрі</li>
     </ol>
 
-    <h3><font color="white" size="5" face="Verdana">Альбоми</font></h3>
-    <a href="img/alterego.png" target="_blank">
-        <img src="img/alterego.png" width="350" height="350">
-    </a>
-    <p><font color="white" face="Verdana" size="5">Alter Ego by Lisa</font></p>
+    <h2>Альбоми</h2>
+    <div class="gallery">
+        <div class="popular-album">
+            <img src="img/alterego.png" alt="Alter Ego">
+            <p>Alter Ego by Lisa</p>
+        </div>
+        
+        <div class="popular-album">
+            <img src="img/ruby.png" alt="Ruby">
+            <p>Ruby by Jennie</p>
+        </div>
+    </div>
     
+    <h1>Дивіться одну з пісень альбому</h1>
 
-    <a href="img/ruby.png" target="_blank">
-        <img src="img/ruby.png" width="350" height="350">
-    </a>
-    <p><font color="white" face="Verdana" size="5">Ruby by Jennie</font></p>
-
-    <h2 style="color: white; font-size: 30px; font-family: Verdana;">Дивіться одну з пісень альбому</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/23urWKmHS6o" frameborder="0" allowfullscreen></iframe>
-
-    <p id="bottom" style="margin-top: 800px;">
-        <font color="white">Слідкуйте за нами в Twitter, Instagram, TikTok</font>
+    <div class="gallery">
+        <div>
+            <p>LISA - FUTW (Vixi Solo Version) (album Alter)</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/r5VRqWkFpEQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+    
+        <div>
+            <p>JENNIE & Dominic Fike - Love Hangover (album Ruby)</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/23urWKmHS6o" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <p id="bottom">
+     Слідкуйте за нами в Twitter, Instagram, TikTok
     </p> 
 </body>
 </html>

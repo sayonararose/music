@@ -2,3 +2,117 @@ body{
     background-color: black;
     font-family: Verdana, sans-serif;
 }
+
+#bottom{
+    margin-top: 800px;
+    color: white;
+}
+
+.special-link{
+    color: rgb(205, 120, 245);
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+h1{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+
+h2{ 
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+p{
+    color: white;
+    font-size: 20px;
+}
+
+ul{
+    color:rgb(122, 37, 37) ; 
+ }
+  
+ol{
+    color: white;
+    font-size: 25px;
+    margin-left: 40px;
+}
+
+dl{
+    color: white;
+    font-size: 25px;
+    margin-left: 45px;
+}
+
+dt{
+    margin-top: 50px;
+}
+
+dd{
+    margin-top: 10px;
+}
+
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: separate; 
+    border-spacing: 5px; 
+    color: white;
+    border: 1px solid white; 
+    text-align: center;
+}
+
+th, td {
+    padding: 15px; 
+    border: 1px solid white; 
+    font-size: 20px;
+}
+
+ /* Контекстний селектор */
+ .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+ .navbar a:hover{
+    text-decoration: underline;
+ }
+
+/* дочірний селектор */
+.popular-album > p {
+    font-size: 25px;
+}
+
+/* Сусідній селектор */
+dd + dd img {
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+}
+/* загальний сусідній селектор */
+h1 ~ h2 {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center; 
+    gap: 50px; 
+}
+
+.popular-album {
+    text-align: center; 
+}
+
+.popular-album img {
+    width: 450px;
+    height: 450px;
+    border-radius: 10px;
+}

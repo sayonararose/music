@@ -7,49 +7,59 @@
     <meta name="description" content="Сторінка з продажу альбомів">
     <link rel="stylesheet" href="style.css">
     <title>music</title>
+    <style>
+        a.spotify{
+            font-size: 20px !important; 
+        }
+
+        a.spotify:hover{
+            color: rgb(202, 38, 38) !important;
+            text-decoration: none !important;
+        }
+    </style>
 </head>
 <body>
-    <a href="index.html"><img src="img/logo_bordo.png" alt="Логотип"></a>
+    <nav class="navbar">
+        <a href="index.html"><img src="img/logo_bordo.png" alt="Логотип"></a>
+        <ul>
+            <li><a href="music.html">Альбоми</a></li>
+            <li><a href="merch.html">Мерч</a></li>
+            <li><a href="preview.html">Анонси</a></li>
+        </ul>
+    </nav>
 
-    <!-- Маркований список з поосиланням на сторінки  -->
-    <ul style="color:  rgb(122, 37, 37);">
-        <li><a href="music.html" style="color: white;; font-size: 30px;">Альбоми</a></li>
-        <li><a href="merch.html" style="color: white; font-size: 30px;">Мерч</a></li>
-        <li><a href="preview.html" style="color: white; font-size: 30px;">Анонси</a></li>
-    </ul>
-
-    <!-- Таблиця 3*4 з використанням відступів cellspacing(відстань між комірками таблиці) cellpadding( внутрішній відступ всередині комірки) -->
-    <table border="1" width="80%" align="center" cellspacing="5" cellpadding="10">
+    <table>
         <colgroup>
             <col style="width: 20%;">
             <col style="width: 60%;">
             <col style="width: 20%;">
         </colgroup>
         <tr>
-            <th style="color: white; font-family: Verdana; background-color: #333;">Альбом</th>
-            <th style="color: white; font-family: Verdana; background-color: #333;">Назва</th>
-            <th style="color: white; font-family: Verdana; background-color: #333;">Ціна</th>
+            <th style="background-color: #333;">Альбом</th>
+            <th style="background-color: #333;">Назва</th>
+            <th style="background-color: #333;">Ціна</th>
         </tr>
         <tr>
-            <td><img src="img/nwjns.jpg" width="190"></td>
-            <td><a href="https://open.spotify.com/album/1HMLpmZAnNyl9pxvOnTovV?si=kgvRyJusQUqhaStJm1hHdA" style="color: white;">NewJeans 1st Ep 'NewJeans' (by NewJeans)</a></td>
-            <td style="color: white;">1000 грн</td>
+            <td><img src="img/nwjns.jpg" width="250"></td>
+            <td><a href="https://open.spotify.com/album/1HMLpmZAnNyl9pxvOnTovV?si=kgvRyJusQUqhaStJm1hHdA" class="spotify">NewJeans 1st Ep 'NewJeans' (by NewJeans)</a></td>
+            <td>1000 грн</td>
         </tr>
         <tr>
-            <td><img src="img/hardstone.jfif" width="190"></td>
-            <td><a href="https://open.spotify.com/album/55S2SOsWCYekWJtJ8LwVqV?si=GirsGEHAQzqjeKgWlaP8wA" style="color: white;">Hardstone Psycho (by Don Toliver)</a></td>
-            <td style="color: white;">1200 грн</td>
+            <td><img src="img/hardstone.jfif" width="250"></td>
+            <td><a href="https://open.spotify.com/album/55S2SOsWCYekWJtJ8LwVqV?si=GirsGEHAQzqjeKgWlaP8wA" class="spotify">Hardstone Psycho (by Don Toliver)</a></td>
+            <td>1200 грн</td>
         </tr>
         <tr>
-            <td><img src="img/young.jpg" width="190"></td>
-            <td><a href="https://open.spotify.com/album/0EbH9upNSg6zsdFZ8g11Yl?si=twDCrcOBR3OMMlYOd3a3ug" style="color: white;">XXL EP (by Young Posse)</a></td>
-            <td style="color: white;">900 грн</td>
+            <td><img src="img/young.jpg" width="250"></td>
+            <td><a href="https://open.spotify.com/album/0EbH9upNSg6zsdFZ8g11Yl?si=twDCrcOBR3OMMlYOd3a3ug" class="spotify">XXL EP (by Young Posse)</a></td>
+            <td>900 грн</td>
         </tr>
         <tr>
-            <td><img src="img/Doechii.webp" width="190"></td>
-            <td><a href="https://open.spotify.com/album/60UzB8mOCMpc7xkuJE6Bwc?si=PicFGQBeSlakPUsVWuIftg" style="color: white;">Alligator Bites Never Heal (by Doechii)</a></td>
-            <td style="color: white;">1150 грн</td>
+            <td><img src="img/Doechii.webp" width="250"></td>
+            <td><a href="https://open.spotify.com/album/60UzB8mOCMpc7xkuJE6Bwc?si=PicFGQBeSlakPUsVWuIftg" class="spotify">Alligator Bites Never Heal (by Doechii)</a></td>
+            <td>1150 грн</td>
         </tr>
-    </table>    
+    </table>
+       
 </body>
 </html>
