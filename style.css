@@ -77,17 +77,56 @@ a{
     color: white;
     text-decoration: none;
 }
-
- /* Контекстний селектор */
- .navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
+a:link{
+    color: blueviolet;
 }
 
- .navbar a:hover{
+a:active{
+    color: rgb(202, 38, 38);
+}
+
+.navbar{ 
+    display: flex;
+    align-items: center;
+    padding: 15px; 
+    position: sticky;
+}
+
+.nav-list{
+    display: flex;
+    list-style-type: none;  
+}
+
+ /* Контекстний селектор */
+.nav-list a {
+    display: block;
+    margin-left: 3em;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    margin-top: 2em;
+    font-weight: bold;
+    
+}
+.navbar a:hover{
     text-decoration: underline;
  }
+
+ /* псевдоклас :first-child */
+ .nav-list li:first-child a {
+    color: rgb(122, 37, 37);
+    text-decoration: underline;
+}
+
+.logo {
+    font-size: 36px;
+    margin-left: 10px;
+}
+
+.logo img{
+    width: 150px;
+    height: 150px;
+   
+}
 
 /* дочірний селектор */
 .popular-album > p {
@@ -120,4 +159,35 @@ h1 ~ h2 {
     width: 450px;
     height: 450px;
     border-radius: 10px;
+}
+
+.merch-table img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    float: left;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.merch-table img:hover {
+    transform: scale(1.1);
+}
+
+.merch-table p {
+    font-size: 20px;
+    color: white;
+}
+
+#releases::before {
+    content: "🔥";
+}
+
+#releases::after {
+    content: "🔥";
+}
+
+.nav-list li:first-child a {
+    color: rgb(122, 37, 37);
+    text-decoration: underline;
 }
