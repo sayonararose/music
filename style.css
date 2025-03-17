@@ -139,11 +139,7 @@ dd + dd img {
     width: 400px;
     height: auto;
 }
-/* загальний сусідній селектор */
-h1 ~ h2 {
-    font-style: italic;
-    text-decoration: underline;
-}
+
 
 .gallery {
     display: flex;
