@@ -111,12 +111,6 @@ a:active{
     text-decoration: underline;
  }
 
- /* псевдоклас :first-child */
- .nav-list li:first-child a {
-    color: rgb(122, 37, 37);
-    text-decoration: underline;
-}
-
 .logo {
     font-size: 36px;
     margin-left: 10px;
@@ -183,6 +177,7 @@ dd + dd img {
     content: "🔥";
 }
 
+ /* псевдоклас :first-child */
 .nav-list li:first-child a {
     color: rgb(122, 37, 37);
     text-decoration: underline;
