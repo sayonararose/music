@@ -45,13 +45,13 @@
         <button onclick="changeTextColor()">Змінити колір тексту</button>
         <button onclick="changeAllH1()">Змінити всі заголовки h1</button>
         <button onclick="addStrongToWelcome()">Додати текст у вітання</button>
-    <button onclick="addNewParagraph()">Додати новий параграф на початок</button>
-    <button onclick="addTextNode()">Додати текстовий вузол на початок</button>
-    <button onclick="prependNavLink()">Додати 'Про нас' в меню</button>
-    <button onclick="addNewGenre()">Додати жанр після джазу</button>
-    <button onclick="replaceAlbumImage()">Замінити обкладинку альбому</button>
-    <button onclick="removeGenresHeading()">Видалити заголовок 'Жанри'</button>
-    <button onclick="writeNewHeading()">Вставити заголовок через document.write</button>
+        <button onclick="addNewParagraph()">Додати новий параграф на початок</button>
+        <button onclick="addTextNode()">Додати текстовий вузол на початок</button>
+        <button onclick="prependNavLink()">Додати 'Про нас' в меню</button>
+        <button onclick="addNewGenre()">Додати жанр після джазу</button>
+        <button onclick="replaceAlbumImage()">Замінити обкладинку альбому</button>
+        <button onclick="removeGenresHeading()">Видалити заголовок 'Жанри'</button>
+        <button onclick="writeNewHeading()">Вставити заголовок через document.write</button>
     </div>
 
 
@@ -110,39 +110,7 @@
         if (userName) {
             alert("Приємного перегляду, " + userName + "!");
         }
-    
-    
-        // Функція для діалогу з користувачем
-        function userDialog() {
-            let genre = prompt("Який жанр музики ви найбільше полюбляєте?");
-            
-            if (genre) {
-                alert("Чудовий вибір! У нас є альбоми на будь-який смак!");
-            } else {
-                alert("Ви нічого не ввели ");
-            }
-        }
-    
-        userDialog();
-    
-    
-        // Інфо про розробника
-        function developerInfo(surname, name, position = "Студент") {
-            alert(`Розробник сторінки: ${surname} ${name}, посада: ${position}`);
-        }
-        developerInfo("Савенко", "Анастасія");
-    
-        // Функція порівняння рядків
-        function compareStrings(str1, str2) {
-            if (str1 > str2) {
-                alert(`Більший рядок: ${str1}`);
-            } else if (str2 > str1) {
-                alert(`Більший рядок: ${str2}`);
-            } else {
-                alert("Рядки однакові.");
-            }
-        }
-        compareStrings("музика", "альбом");</script>
+    </script>
     <script src="album.js"></script>
 </body>
 </html> 
