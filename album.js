@@ -30,7 +30,7 @@ window.onload = function() {
     changeSocials();
 };
 
-// Функції для автоматичних дій
+// Заміна першого елемента списку жанрів
 function replaceFirstGenre() {
     const firstGenre = document.querySelector('ol li');
     if (firstGenre) {
@@ -38,6 +38,7 @@ function replaceFirstGenre() {
     }
 }
 
+// Зміна тексту спеціального посилання
 function changeSpecialLink() {
     const specialLink = document.querySelector('.special-link');
     if (specialLink) {
@@ -45,6 +46,7 @@ function changeSpecialLink() {
     }
 }
 
+// Зміна тексту в блоці соціальних мереж
 function changeSocials() {
     const bottomSpan = document.querySelector('#bottom span').firstChild;
     if (bottomSpan) {
@@ -52,7 +54,7 @@ function changeSocials() {
     }
 }
 
-
+// Додає напівжирний текст до привітання
 function addStrongToWelcome() {
     const welcome = document.querySelector('.welcome-message');
     if (welcome) {
@@ -62,12 +64,14 @@ function addStrongToWelcome() {
     }
 }
 
+// Створює новий параграф і додає на початок сторінки
 function addNewParagraph() {
     const newParagraph = document.createElement('p');
     newParagraph.textContent = "Новий параграф, створений через createElement.";
     document.body.prepend(newParagraph);
 }
 
+// Створює текстовий вузол і додає в новий div
 function addTextNode() {
     const textNode = document.createTextNode('Створено вузол.');
     const div = document.createElement('div');
@@ -75,6 +79,7 @@ function addTextNode() {
     document.body.prepend(div);
 }
 
+// Додає новий пункт "Про нас" в меню навігації
 function prependNavLink() {
     const navList = document.querySelector('.nav-list');
     if (navList) {
@@ -84,6 +89,7 @@ function prependNavLink() {
     }
 }
 
+// Додає новий жанр після другого пункту в списку
 function addNewGenre() {
     const secondGenre = document.querySelector('ol li:nth-child(2)');
     if (secondGenre) {
@@ -93,7 +99,7 @@ function addNewGenre() {
     }
 }
 
-
+// Заміна зображення альбому
 function replaceAlbumImage() {
     const albumImage = document.querySelector('.gallery .popular-album img');
     if (albumImage) {
@@ -102,8 +108,7 @@ function replaceAlbumImage() {
     }
 }
 
-
-
+// Видаляє заголовок "жанри" зі сторінки
 function removeGenresHeading() {
     const h2Genre = document.querySelector('h2');
     if (h2Genre) {
@@ -111,6 +116,7 @@ function removeGenresHeading() {
     }
 }
 
+// Створює новий заголовок через document.write
 function writeNewHeading() {
     document.write('<h2>Це новий заголовок</h2>');
 }
