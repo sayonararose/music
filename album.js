@@ -35,9 +35,9 @@ function changeBackground() {
     }, 30000);
 }
 
-// Функція переходу на сторінку мерчу
-function redirectToMerch() {
-    location.href = "merch.html";
+// Функція для переходу на альбом в спотіфай
+function redirectToSpotify() {
+    location.href = "https://open.spotify.com/album/1vWMw6pu3err6qqZzI3RhH?si=357c9c013f354cd5";
 }
 
 // Функція зміни кольору тексту внизу сторінки
