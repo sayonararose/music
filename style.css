@@ -97,7 +97,7 @@ a:active{
     list-style-type: none;  
 }
 
- /* Контекстний селектор */
+
 .nav-list a {
     display: block;
     margin-left: 3em;
@@ -105,7 +105,6 @@ a:active{
     letter-spacing: 0.1em;
     margin-top: 2em;
     font-weight: bold;
-    
 }
 .navbar a:hover{
     text-decoration: underline;
@@ -121,19 +120,6 @@ a:active{
     height: 150px;
    
 }
-
-/* дочірний селектор */
-.popular-album > p {
-    font-size: 25px;
-}
-
-/* Сусідній селектор */
-dd + dd img {
-    border-radius: 10px;
-    width: 400px;
-    height: auto;
-}
-
 
 .gallery {
     display: flex;
@@ -175,10 +161,4 @@ dd + dd img {
 
 #releases::after {
     content: "🔥";
-}
-
- /* псевдоклас :first-child */
-.nav-list li:first-child a {
-    color: rgb(122, 37, 37);
-    text-decoration: underline;
 }
