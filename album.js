@@ -1,10 +1,24 @@
 //  Функція для діалогу з користувачем
 function userDialog() {
-    let genre = prompt("Який жанр музики ви найбільше полюбляєте?");
-    if (genre) {
-        alert("Чудовий вибір! У нас є альбоми на будь-який смак!");
-    } else {
-        alert("Ви нічого не ввели");
+    let genre;
+    let attempts = 0;
+    const maxAttempts = 3; // максимальна кількість спроб
+
+    while (attempts < maxAttempts) {
+        genre = prompt("Який жанр музики ви найбільше полюбляєте?");
+        
+        if (genre) {
+            alert("Чудовий вибір! У нас є альбоми на будь-який смак!");
+            break; 
+        } else {
+            alert("Ви нічого не ввели. Спробуйте ще раз.");
+        }
+        
+        attempts++; 
+    }
+
+    if (attempts === maxAttempts) {
+        alert("Ви перевищили максимальну кількість спроб.");
     }
 }
 userDialog();
@@ -58,73 +72,6 @@ function changeAllH1() {
     });
 }
 
-
-// Заміна першого елемента списку жанрів 
-function replaceFirstGenre() {
-    const firstGenre = document.querySelector('ol li');
-    if (firstGenre) {
-        firstGenre.outerHTML = '<li>Рок</li>';
-    }
-}
-
-
-// Зміна тексту спеціального посилання 
-function changeSpecialLink() {
-    const specialLink = document.querySelector('.special-link');
-    if (specialLink) {
-        specialLink.textContent = 'Натисни сюди!';
-    }
-}
-
-
-// Зміна тексту в блоці соцмереж 
-function changeSocials() {
-    const bottomSpan = document.querySelector('#bottom span').firstChild;
-    if (bottomSpan) {
-        bottomSpan.nodeValue = " Facebook, Instagram, TikTok";
-    }
-}
-
-
-// Створення нового параграфа 
-function addNewParagraph() {
-    const newParagraph = document.createElement('p');
-    newParagraph.textContent = "Новий параграф.";
-    document.body.prepend(newParagraph);
-}
-
-
-// Створення текстовий вузла
-function addTextNode() {
-    const textNode = document.createTextNode('Створено вузол.');
-    const div = document.createElement('div');
-    div.prepend(textNode);
-    document.body.prepend(div);
-}
-
-
-// Додаємо новий пункт в навігацію 
-function prependNavLink() {
-    const navList = document.querySelector('.nav-list');
-    if (navList) {
-        const newNavItem = document.createElement('li');
-        newNavItem.innerHTML = '<a href="about.html">Про нас</a>';
-        navList.prepend(newNavItem);
-    }
-}
-
-
-// Додаємо новий жанр після другого пункту списку 
-function addNewGenre() {
-    const secondGenre = document.querySelector('ol li:nth-child(2)');
-    if (secondGenre) {
-        const newGenre = document.createElement('li');
-        newGenre.textContent = 'Блюз';
-        secondGenre.after(newGenre);
-    }
-}
-
-
 // Видалення заголовку "жанри" зі сторінки (remove)
 function removeGenresHeading() {
     const h2Genre = document.querySelector('h2');
@@ -133,8 +80,36 @@ function removeGenresHeading() {
     }
 }
 
+// Заміна першого елемента списку жанрів
+document.querySelector('ol li').outerHTML = '<li>Рок</li>';
+
+// Зміна тексту спеціального посилання
+document.querySelector('.special-link').textContent = 'Натисни сюди!';
+
+// Зміна тексту в блоці соцмереж
+document.querySelector('#bottom span').firstChild.nodeValue = " Facebook, Instagram, TikTok";
+
+// Створення нового параграфа
+const newParagraph = document.createElement('p');
+newParagraph.textContent = "Новий параграф.";
+document.body.prepend(newParagraph);
+
+// Створення текстового вузла
+const textNode = document.createTextNode('Створено вузол.');
+const div = document.createElement('div');
+div.prepend(textNode);
+document.body.prepend(div);
+
+// Додаємо новий пункт в навігацію
+const newNavItem = document.createElement('li');
+newNavItem.innerHTML = '<a href="about.html">Про нас</a>';
+document.querySelector('.nav-list').prepend(newNavItem);
+
+// Додаємо новий жанр після другого пункту списку
+const newGenre = document.createElement('li');
+newGenre.textContent = 'Блюз';
+document.querySelector('ol li:nth-child(2)').after(newGenre);
 
 // Створення нового заголовку через document.write
-function writeNewHeading() {
-        document.write('<h2>Це новий заголовок</h2>');
-    }
+document.write('<h2>Це новий заголовок</h2>');
+
