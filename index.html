@@ -106,10 +106,20 @@
 
         setTimeout(function() {
             let userName = prompt("Як вас звати?");
+            
             if (userName) {
-                alert("Приємного перегляду, " + userName + "!");
+                let isConfirmed = confirm("Ви ввели: " + userName + ". Підтверджуєте?");
+                
+                if (isConfirmed) {
+                    alert("Приємного перегляду, " + userName + "!");
+                } else {
+                    alert("Ви не підтвердили своє ім'я.");
+                }
+            } else {
+                alert("Ви не ввели ім'я.");
             }
         }, 100); 
+
 
 
     </script>

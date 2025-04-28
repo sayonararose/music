@@ -1,19 +1,13 @@
 //  Функція для діалогу з користувачем
 function userDialog() {
     let genre = prompt("Який жанр музики ви найбільше полюбляєте?");
-    
     if (genre) {
-        let isConfirmed = confirm("Ви ввели жанр: " + genre + ". Підтверджуєте?");
-        
-        if (isConfirmed) {
-            alert("Чудовий вибір! У нас є альбоми на будь-який смак!");
-        } else {
-            alert("Ви нічого не ввели");
-        }
+        alert("Чудовий вибір! У нас є альбоми на будь-який смак!");
+    } else {
+        alert("Ви нічого не ввели");
     }
 }
 userDialog();
-
 
 // Інфо про розробника
 function developerInfo(surname, name, position = "Студент") {
