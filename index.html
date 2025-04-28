@@ -44,16 +44,14 @@
         <button onclick="redirectToSpotify()">Перейти на альбом в спотіфай</button>
         <button onclick="changeTextColor()">Змінити колір тексту</button>
         <button onclick="changeAllH1()">Змінити всі заголовки h1</button>
-        <button onclick="addStrongToWelcome()">Додати текст у вітання</button>
         <button onclick="addNewParagraph()">Додати новий параграф на початок</button>
         <button onclick="addTextNode()">Додати текстовий вузол на початок</button>
         <button onclick="prependNavLink()">Додати 'Про нас' в меню</button>
-        <button onclick="addNewGenre()">Додати жанр після джазу</button>
-        <button onclick="replaceAlbumImage()">Замінити обкладинку альбому</button>
+        <button onclick="addNewGenre()">Додати жанр після другого пункту</button>
         <button onclick="removeGenresHeading()">Видалити заголовок 'Жанри'</button>
         <button onclick="writeNewHeading()">Вставити заголовок через document.write</button>
     </div>
-
+    
 
     <p class="welcome-message">Музика – це більше, ніж просто звук. Це історії, емоції та спогади, які ми зберігаємо разом із улюбленими <a href="music.html" class="album-link">альбомами.</a> <br>
         Тут зібрані культові та нові альбоми, які заслуговують на увагу кожного меломана.
@@ -103,13 +101,17 @@
     </p> 
 
     <script>
-        // Вивід повідомлень через alert, prompt, confirm
+        // Вивід повідомленя
         alert("Вітаємо на сайті!");
-    
-        let userName = prompt("Як вас звати?");
-        if (userName) {
-            alert("Приємного перегляду, " + userName + "!");
-        }
+
+        setTimeout(function() {
+            let userName = prompt("Як вас звати?");
+            if (userName) {
+                alert("Приємного перегляду, " + userName + "!");
+            }
+        }, 100); 
+
+
     </script>
     <script src="album.js"></script>
 </body>

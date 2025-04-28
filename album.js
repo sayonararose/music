@@ -1,4 +1,4 @@
-// Функція для діалогу з користувачем
+//  Функція для діалогу з користувачем
 function userDialog() {
     let genre = prompt("Який жанр музики ви найбільше полюбляєте?");
     if (genre) {
@@ -27,7 +27,7 @@ function compareStrings(str1, str2) {
 }
 compareStrings("музика", "альбом");
 
-// Функція зміни фону сторінки
+// Зміна фону сторінки на 30 секунд
 function changeBackground() {
     document.body.style.backgroundColor = "#ab5583";
     setTimeout(() => {
@@ -35,34 +35,31 @@ function changeBackground() {
     }, 30000);
 }
 
-// Функція для переходу на альбом в спотіфай
+
+// Перехід на іншу сторінку через location
 function redirectToSpotify() {
     location.href = "https://open.spotify.com/album/1vWMw6pu3err6qqZzI3RhH?si=357c9c013f354cd5";
 }
 
-// Функція зміни кольору тексту внизу сторінки
+
+// Зміна кольору тексту через getElementById
 function changeTextColor() {
     document.getElementById("bottom").style.color = "lightblue";
 }
 
-// Функція зміни всіх заголовків h1
+
+// Зміна всіх заголовків h1 через querySelectorAll
 function changeAllH1() {
-    let allH1 = document.querySelectorAll("h1"); 
+    let allH1 = document.querySelectorAll("h1");
     allH1.forEach((h1, index) => {
         h1.textContent = `Новий заголовок №${index + 1}`;
-        h1.style.color = "lightblue"; 
-        h1.style.fontSize = "50px"; 
+        h1.style.color = "lightblue";
+        h1.style.fontSize = "50px";
     });
 }
 
-// Автоматичні зміни при завантаженні сторінки
-window.onload = function() {
-    replaceFirstGenre();
-    changeSpecialLink();
-    changeSocials();
-};
 
-// Заміна першого елемента списку жанрів (outerHTML)
+// Заміна першого елемента списку жанрів 
 function replaceFirstGenre() {
     const firstGenre = document.querySelector('ol li');
     if (firstGenre) {
@@ -70,7 +67,8 @@ function replaceFirstGenre() {
     }
 }
 
-// Зміна тексту спеціального посилання (textContent)
+
+// Зміна тексту спеціального посилання 
 function changeSpecialLink() {
     const specialLink = document.querySelector('.special-link');
     if (specialLink) {
@@ -78,7 +76,8 @@ function changeSpecialLink() {
     }
 }
 
-// Зміна тексту в блоці соцмереж (nodeValue)
+
+// Зміна тексту в блоці соцмереж 
 function changeSocials() {
     const bottomSpan = document.querySelector('#bottom span').firstChild;
     if (bottomSpan) {
@@ -86,24 +85,16 @@ function changeSocials() {
     }
 }
 
-// Додає напівжирний текст до привітання (createElement, textContent, prepend)
-function addStrongToWelcome() {
-    const welcome = document.querySelector('.welcome-message');
-    if (welcome) {
-        const strong = document.createElement('strong');
-        strong.textContent = ' Насолоджуйтесь!';
-        welcome.prepend(strong);
-    }
-}
 
-// Створює новий параграф і додає його на початок сторінки (createElement, textContent, prepend)
+// Створення нового параграфа 
 function addNewParagraph() {
     const newParagraph = document.createElement('p');
-    newParagraph.textContent = "Новий параграф, створений через createElement.";
+    newParagraph.textContent = "Новий параграф.";
     document.body.prepend(newParagraph);
 }
 
-// Створює текстовий вузол і додає в новий div (createTextNode, prepend)
+
+// Створення текстовий вузла
 function addTextNode() {
     const textNode = document.createTextNode('Створено вузол.');
     const div = document.createElement('div');
@@ -111,7 +102,8 @@ function addTextNode() {
     document.body.prepend(div);
 }
 
-// Додає новий пункт "Про нас" в навігацію (createElement, innerHTML, prepend)
+
+// Додаємо новий пункт в навігацію 
 function prependNavLink() {
     const navList = document.querySelector('.nav-list');
     if (navList) {
@@ -121,7 +113,8 @@ function prependNavLink() {
     }
 }
 
-// Додає новий жанр після другого пункту списку (createElement, textContent, after)
+
+// Додаємо новий жанр після другого пункту списку 
 function addNewGenre() {
     const secondGenre = document.querySelector('ol li:nth-child(2)');
     if (secondGenre) {
@@ -131,16 +124,8 @@ function addNewGenre() {
     }
 }
 
-// Заміна зображення альбому (зміна атрибутів src та alt)
-function replaceAlbumImage() {
-    const albumImage = document.querySelector('.gallery .popular-album img');
-    if (albumImage) {
-        albumImage.src = "img/rosie.jpg"; 
-        albumImage.alt = "Rosie by Rosé";
-    }
-}
 
-// Видаляє заголовок "жанри" зі сторінки (remove)
+// Видалення заголовку "жанри" зі сторінки (remove)
 function removeGenresHeading() {
     const h2Genre = document.querySelector('h2');
     if (h2Genre) {
@@ -148,7 +133,8 @@ function removeGenresHeading() {
     }
 }
 
-// Створює новий заголовок через document.write
+
+// Створення нового заголовку через document.write
 function writeNewHeading() {
-    document.write('<h2>Це новий заголовок</h2>');
-}
+        document.write('<h2>Це новий заголовок</h2>');
+    }
