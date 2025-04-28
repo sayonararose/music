@@ -7,6 +7,19 @@
     <meta name="description" content="Мерч сайту музичних альбомів">
     <link rel="stylesheet" href="style.css">
     <title>merch</title>
+    <script>
+         // Функція порівняння рядків
+         function compareStrings(str1, str2) {
+            if (str1 > str2) {
+                alert(`Більший рядок: ${str1}`);
+            } else if (str2 > str1) {
+                alert(`Більший рядок: ${str2}`);
+            } else {
+                alert("Рядки однакові.");
+            }
+        }
+        compareStrings("музика", "альбом");
+    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -47,6 +60,5 @@
             <td>1000 грн</td>
         </tr>
     </table>
-    <script src="album.js"></script>
 </body>
 </html>
