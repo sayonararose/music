@@ -134,14 +134,17 @@
 
 
         // Зміна всіх заголовків h1 через querySelectorAll
-        function changeAllH1() {
-            let allH1 = document.querySelectorAll("h1");
-            allH1.forEach((h1, index) => {
-                h1.textContent = `Новий заголовок №${index + 1}`;
-                h1.style.color = "lightblue";
-                h1.style.fontSize = "50px";
-            });
-        }
+            function changeAllH1() {
+        let allH1 = document.querySelectorAll("h1");
+        allH1.forEach((h1, index) => {
+            const newH1 = document.createElement("h1");
+            newH1.textContent = `Новий заголовок №${index + 1}`;
+            newH1.style.color = "lightblue";
+            newH1.style.fontSize = "50px";
+            h1.replaceWith(newH1);
+        });
+    }
+
 
         // Видалення заголовку "жанри" зі сторінки (remove)
         function removeGenresHeading() {
