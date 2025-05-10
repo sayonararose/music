@@ -7,26 +7,6 @@
     <meta name="description" content="Головна сторінка сайту музичних альбомів">
     <link rel="stylesheet" href="style.css">
     <title>home</title>
-    <script>
-        // Вивід повідомленя
-        alert("Вітаємо на сайті!");
-
-        setTimeout(function() {
-            let userName = prompt("Як вас звати?");
-            
-            if (userName) {
-                let isConfirmed = confirm("Ви ввели: " + userName + ". Підтверджуєте?");
-                
-                if (isConfirmed) {
-                    alert("Приємного перегляду, " + userName + "!");
-                } else {
-                    alert("Ви не підтвердили своє ім'я.");
-                }
-            } else {
-                alert("Ви не ввели ім'я.");
-            }
-        }, 200); 
-    </script>
     <style>
         .welcome-message{
             font-size: 25px;
@@ -59,14 +39,6 @@
     
     <a href="#bottom" class="special-link">Тицни мене!</a>
  
-    <div class="buttons">
-        <button onclick="changeBackground()">Змінити фон на 30 секунд</button>
-        <button onclick="redirectToSpotify()">Перейти на альбом в спотіфай</button>
-        <button onclick="changeAllH1()">Змінити всі заголовки h1</button>
-        <button onclick="removeGenresHeading()">Видалити заголовок 'Жанри'</button>
-    </div>
-    
-
     <p class="welcome-message">Музика – це більше, ніж просто звук. Це історії, емоції та спогади, які ми зберігаємо разом із улюбленими <a href="music.html" class="album-link">альбомами.</a> <br>
         Тут зібрані культові та нові альбоми, які заслуговують на увагу кожного меломана.
         Обирай свою улюблену музику та занурюйся у світ якісного звучання!
@@ -75,7 +47,7 @@
     <h1>Цього тижня популярні</h1>
     <h2>Жанри</h2>
     
-     <ol>
+    <ol id="genreList">
         <li>K-pop</li>
         <li>Джаз</li>
         <li>Метал</li>
@@ -83,19 +55,47 @@
     </ol>
 
     <h2>Альбоми</h2>
-    <div class="gallery">
-        <div class="popular-album">
-            <img src="img/alterego.png" alt="Alter Ego">
-            <p>Alter Ego by Lisa</p>
-        </div>
-        
-        <div class="popular-album">
-            <img src="img/ruby.png" alt="Ruby">
-            <p>Ruby by Jennie</p>
-        </div>
-    </div>
+<div class="gallery">
+
+  <div class="popular-album" id="album-lisa">
+    <img src="img/alterego.png" alt="Alter Ego">
+    <p>Alter Ego by Lisa</p>
+    <button onclick="showLisaInfo()">Деталі</button>
+    <button id="like-lisa">❤️ Подобається</button>
+    <button id="add-lisa">Додати до колекції</button>
+  </div>
+
+  <div class="popular-album" id="album-jisoo">
+    <img src="img/jisoo.png" alt="Amortage">
+    <p>AMORTAGE by Jisoo</p>
+    <button id="like-jisoo">❤️ Подобається</button>
+    <button id="add-jisoo">Додати до колекції</button>
+  </div>
+
+  <div class="popular-album" id="album-jennie">
+    <img src="img/ruby.png" alt="Ruby">
+    <p>Ruby by Jennie</p>
+    <button onclick="showJennieInfo()">Деталі</button>
+    <button id="like-jennie">❤️ Подобається</button>
+    <button id="add-jennie">Додати до колекції</button>
+  </div>
+
+  <div class="popular-album" id="album-rose">
+    <img src="img/rosie.jpg" alt="Rosie">
+    <p>Rosie by Rosé</p>
+    <button id="like-rose">❤️ Подобається</button>
+    <button id="add-rose">Додати до колекції</button>
+  </div>
+
+  <div class="popular-album" id="album-night-lovell">
+  <img src="img/night.jfif" alt="I Hope You're Happy">
+  <p>I HOPE YOU'RE HAPPY by Night Lovell</p>
+  <button id="remove-night-lovell">Видалити альбом</button>
+</div>
+
+</div>
     
-    <h1>Дивіться одну з пісень альбому</h1>
+    <h1 style="margin-top: 150px;">Дивіться одну з пісень альбому</h1>
 
     <div class="gallery">
         <div>
@@ -113,80 +113,8 @@
           Twitter, Instagram, TikTok
     </span>
     </p> 
-    <script>
-                // Зміна фону сторінки на 30 секунд
-        function changeBackground() {
-            document.body.style.backgroundColor = "#ab5583";
-            setTimeout(() => {
-                document.body.style.backgroundColor = "";
-            }, 30000);
-        }
 
-
-        // Перехід на іншу сторінку через location
-        function redirectToSpotify() {
-            location.href = "https://open.spotify.com/album/1vWMw6pu3err6qqZzI3RhH?si=357c9c013f354cd5";
-        }
-
-
-        // Зміна кольору тексту через getElementById
-        document.getElementById("bottom").style.color = "lightblue";
-
-
-        // Зміна всіх заголовків h1 
-            function changeAllH1() {
-        let allH1 = document.querySelectorAll("h1");
-        allH1.forEach((h1, index) => {
-            const newH1 = document.createElement("h1");
-            newH1.textContent = `Новий заголовок №${index + 1}`;
-            newH1.style.color = "lightblue";
-            newH1.style.fontSize = "50px";
-            h1.replaceWith(newH1);
-        });
-    }
-
-
-        // Видалення заголовку "жанри" зі сторінки 
-        function removeGenresHeading() {
-            const h2Genre = document.querySelector('h2');
-            if (h2Genre) {
-                h2Genre.remove();
-            }
-        }
-
-        // Заміна першого елемента списку жанрів
-        document.querySelector('ol li').outerHTML = '<li>Рок</li>';
-
-        // Зміна тексту спеціального посилання
-        document.querySelector('.special-link').textContent = 'Натисни сюди!';
-
-        // Зміна тексту в блоці соцмереж
-        document.querySelector('#bottom span').firstChild.nodeValue = " Facebook, Instagram, TikTok";
-
-        // Створення нового параграфа
-        const newParagraph = document.createElement('p');
-        newParagraph.textContent = "Новий параграф.";
-        document.body.prepend(newParagraph);
-
-        // Створення текстового вузла
-        const textNode = document.createTextNode('Створено вузол.');
-        const div = document.createElement('div');
-        div.prepend(textNode);
-        document.body.prepend(div);
-
-        // Додаємо новий пункт в навігацію
-        const newNavItem = document.createElement('li');
-        newNavItem.innerHTML = '<a href="about.html">Про нас</a>';
-        document.querySelector('.nav-list').prepend(newNavItem);
-
-        // Додаємо новий жанр після другого пункту списку
-        const newGenre = document.createElement('li');
-        newGenre.textContent = 'Блюз';
-        document.querySelector('ol li:nth-child(2)').after(newGenre);
-
-        // Створення нового заголовку через document.write
-        document.write('<h2>Це новий заголовок</h2>');
-    </script>
+    <script src="album.js"></script>
 </body>
 </html> 
 

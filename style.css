@@ -42,18 +42,26 @@ ol{
     margin-left: 40px;
 }
 
-dl{
+dl {
     color: white;
     font-size: 25px;
-    margin-left: 45px;
+    margin-left: 20px;
 }
 
-dt{
+dt {
     margin-top: 50px;
+    cursor: pointer;
 }
 
-dd{
+dd {
     margin-top: 10px;
+}
+
+b.active {
+    background-color: rgb(182, 4, 4);
+    color: black;
+    border-radius: 8px;
+    padding: 5px;
 }
 
 
@@ -135,6 +143,7 @@ a:active{
     width: 450px;
     height: 450px;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .merch-table img {
@@ -155,10 +164,117 @@ a:active{
     color: white;
 }
 
+
+
 #releases::before {
     content: "🔥";
 }
 
 #releases::after {
     content: "🔥";
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid rgba(128, 0, 32, 0.5);
+  background-color: transparent; 
+  color: white; 
+  transition: all 0.3s ease;
+}
+
+
+button:hover {
+  background-color: rgba(128, 0, 32, 0.1); 
+  color: white; 
+  border-color: rgba(128, 0, 32, 0.8); 
+}
+
+
+button:active {
+  background-color: rgba(128, 0, 32, 0.2); 
+  border-color: rgba(128, 0, 32, 0.8);
+}
+
+#remove-night-lovell {
+  color: white;
+  border-color: rgba(128, 0, 32, 0.7); 
+}
+
+#remove-night-lovell:hover {
+  background-color: rgba(128, 0, 32, 0.2); 
+  border-color: rgba(128, 0, 32, 1);
+}
+
+
+button:disabled {
+  background-color: rgba(128, 0, 32, 0.3); 
+  color: rgba(255, 255, 255, 0.5); 
+  border-color: rgba(128, 0, 32, 0.3); 
+  cursor: not-allowed; 
+}
+
+
+ol li {
+    font-size: 25px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+ol li.active {
+    background-color: rgba(128, 0, 32, 0.8);
+    color: white;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+
+#myAlbums {
+    text-align: center;
+    padding: 20px;
+    display: none;
+}
+
+#myAlbums .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+}
+
+#myAlbums img {
+    width: 450px; 
+    height: 450px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.main-btn {
+  padding: 20px 40px;
+  font-size: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid rgba(128, 0, 32, 0.5);
+  background-color: transparent; 
+  color: white; 
+  transition: all 0.3s ease;
+}
+
+.main-btn:hover {
+  background-color: rgba(128, 0, 32, 0.1); 
+  border-color: rgba(128, 0, 32, 0.8); 
+}
+
+.main-btn:active {
+  background-color: rgba(128, 0, 32, 0.2); 
+  border-color: rgba(128, 0, 32, 0.8);
 }

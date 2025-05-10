@@ -20,28 +20,64 @@
         </ul>
     </nav>
 
-    <h1 id="releases">Очікувані релізи</h1>
 
-    <!-- Список Визначення -->
-    <dl>
-        <dt><b>Light Me Up</b></dt>
-        <dd>The Pretty Reckless</dd>
-        <dd><img src="img/Reckless.png"></dd>
-    
-        <dt><b>SOS</b></dt>
-        <dd>SZA</dd>
-        <dd><img src="img/SZA.png"></dd>
-    
-        <dt><b>Give or Take</b></dt>
-        <dd>Giveon </dd>
-        <dd><img src="img/Giveon.png"></dd>
-    </dl>
+    <div class="button-container">
+        <button class="main-btn" data-action="showUpcoming">Показати очікувані релізи</button>
+        <button class="main-btn" data-action="showMyAlbums">Показати мої додані альбоми</button>
+    </div>
+
+
+    <!-- Секція Очікуваних релізів -->
+    <div id="upcomingReleases" style="display:none;">
+         <h1 id="releases">Очікувані релізи</h1>
+        <dl>
+            <dt><b>Light Me Up</b></dt>
+            <dd>The Pretty Reckless</dd>
+            <dd><img src="img/Reckless.png"></dd>
+
+            <dt><b>SOS</b></dt>
+            <dd>SZA</dd>
+            <dd><img src="img/SZA.png"></dd>
+
+            <dt><b>Give or Take</b></dt>
+            <dd>Giveon</dd>
+            <dd><img src="img/Giveon.png"></dd>
+        </dl>
+    </div>
+
+    <!-- Секція Моїх доданих альбомів -->
+    <div id="myAlbums" style="display: none;">
+        <h2>Мій список очікуваних релізів</h2>
+        <div class="gallery">
+            <div>
+                <p><b>DeBÍ TiRAR MáS FOToS</b><br>BAD BUNNY</p>
+                <img src="img/Bad-Bunny.webp" alt="BAD BUNNY">
+            </div>
+            <div>
+                <p><b>Silence Between Songs</b><br>Madison Beer</p>
+                <img src="img/Madison_Beer_Silence_Between_Songs.png" alt="Madison Beer">
+            </div>
+            <div>
+                <p><b>I Never Die</b><br>(G)I-dle</p>
+                <img src="img/i never die" alt="(G)I-dle">
+            </div>
+        </div>
+    </div>
+
     <script>
-    // Інфо про розробника
-    function developerInfo(surname, name, position = "Студент") {
-        alert(`Розробник сторінки: ${surname} ${name}, посада: ${position}`);
-    }
-    developerInfo("Савенко", "Анастасія");
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                const action = this.getAttribute('data-action');
+                
+                if (action === "showUpcoming") {
+                    document.getElementById('upcomingReleases').style.display = 'block';
+                    document.getElementById('myAlbums').style.display = 'none';
+                } else if (action === "showMyAlbums") {
+                    document.getElementById('upcomingReleases').style.display = 'none';
+                    document.getElementById('myAlbums').style.display = 'block';
+                }
+            });
+        });
     </script>
 </body>
 </html>
