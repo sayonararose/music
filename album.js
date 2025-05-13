@@ -54,7 +54,7 @@ document.getElementById("like-rose").onclick = function () {
 
 const removeBtnNightLovell = document.getElementById("remove-night-lovell");
 
-// Функція-обробник для видалення альбому
+// Функція для видалення альбому
 function removeAlbum() {
   const album = document.getElementById("album-night-lovell");
   album.remove(); // Видаляємо альбом
