@@ -1,3 +1,4 @@
+
 .album {
   width: 400px;
   border-radius: 20px;
@@ -26,6 +27,8 @@
   gap: 30px;
   justify-content: center;
   margin-bottom: 40px;
+  text-align: center;
+  color: white;
 }
 
 #ranking {
