@@ -1,0 +1,53 @@
+.album {
+  width: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: grab;
+}
+.album:hover {
+  transform: scale(1.05);
+}
+.album img {
+  width: 100%;
+  border-radius: 20px;
+}
+.album p {
+  margin: 5px 0 0;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+
+#albums {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+#ranking {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dropzone {
+  width: 480px;
+  height: 480px;
+  border: 3px solid rgba(128, 0, 32, 0.8); 
+  border-radius: 20px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  font-family: sans-serif;
+}
+

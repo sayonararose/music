@@ -6,6 +6,7 @@
     <meta name="author" content="Anastasia Savenko">
     <meta name="description" content="Головна сторінка сайту музичних альбомів">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="game.css">
     <title>home</title>
     <style>
         .welcome-message{
@@ -108,13 +109,71 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/23urWKmHS6o" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
-    
+
+    <h2 style="margin-top: 100px;">Розстав альбоми у свій топ </h2>
+
+    <div id="albums">
+    <div class="album">
+      <img src="img/paradise.jpeg" alt="Lana Del Rey - Paradise">
+      <div class="album-name">Lana Del Rey - Born to Die: The Paradise Edition</div>
+    </div>
+    <div class="album">
+      <img src="img/Future_Nostalgia.png" alt="Dua Lipa - Future Nostalgia">
+      <div class="album-name">Dua Lipa - Future Nostalgia</div>
+    </div>
+    <div class="album">
+      <img src="img/Unforgiven.png" alt="LE SSERAFIM - Unforgiven">
+      <div class="album-name">LE SSERAFIM - Unforgiven</div>
+    </div>
+    <div class="album">
+      <img src="img/Lose_Yourself.webp" alt="KISS OF LIFE - Lose Yourself">
+      <div class="album-name">KISS OF LIFE - Lose Yourself</div>
+    </div>
+    <div class="album">
+      <img src="img/Lowlife_Princess_Noir.png" alt="BIBI - Lowlife Princess Noir">
+      <div class="album-name">BIBI - Lowlife Princess Noir</div>
+    </div>
+  </div>
+
+  <div id="ranking">
+    <div class="dropzone">1 місце</div>
+    <div class="dropzone">2 місце</div>
+    <div class="dropzone">3 місце</div>
+    <div class="dropzone">4 місце</div>
+    <div class="dropzone">5 місце</div>
+  </div>
+
+
     <p id="bottom"> Слідкуйте за нами в<span style="color: rgb(189, 34, 34)">
           Twitter, Instagram, TikTok
     </span>
     </p> 
+    
+    <script>
+        document.querySelectorAll('.popular-album').forEach(album => {
+            album.addEventListener('mouseover', (event) => {
+                if (!event.relatedTarget || !album.contains(event.relatedTarget)) {
+                album.style.transform = 'scale(1.03)';
+                album.style.boxShadow = '0 0 25px rgba(255, 0, 0, 0.7)';
+                album.style.transition = '0.3s ease';
+                album.style.cursor = 'pointer';
 
+                // Назва альбому
+                const albumName = album.querySelector('p')?.textContent || album.id;
+                console.log('Навели на альбом:', albumName);
+                }
+            });
+
+            album.addEventListener('mouseout', (event) => {
+                if (!event.relatedTarget || !album.contains(event.relatedTarget)) {
+                album.style.transform = 'scale(1)';
+                album.style.boxShadow = 'none';
+                }
+            });
+        });
+    </script>
     <script src="album.js"></script>
+    <script src="game.js"></script>
 </body>
 </html> 
 

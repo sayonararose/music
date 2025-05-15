@@ -278,3 +278,10 @@ ol li.active {
   background-color: rgba(128, 0, 32, 0.2); 
   border-color: rgba(128, 0, 32, 0.8);
 }
+
+.popular-album {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
