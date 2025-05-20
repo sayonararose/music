@@ -149,29 +149,33 @@
     </span>
     </p> 
     
-    <script>
-        document.querySelectorAll('.popular-album').forEach(album => {
-            album.addEventListener('mouseover', (event) => {
-                if (!event.relatedTarget || !album.contains(event.relatedTarget)) {
+  <script>
+    document.querySelectorAll('.popular-album').forEach(album => {
+        album.addEventListener('mouseover', (event) => {
+            const related = event.relatedTarget;
+            if (!related || !album.contains(related)) {
                 album.style.transform = 'scale(1.03)';
                 album.style.boxShadow = '0 0 25px rgba(255, 0, 0, 0.7)';
                 album.style.transition = '0.3s ease';
                 album.style.cursor = 'pointer';
 
-                // Назва альбому
-                const albumName = album.querySelector('p')?.textContent || album.id;
-                console.log('Навели на альбом:', albumName);
+                const targetAlbum = event.target.closest('.popular-album');
+                if (targetAlbum) {
+                    const albumName = targetAlbum.querySelector('p')?.textContent || targetAlbum.id;
+                    console.log('Ви навели на альбом:', albumName);
                 }
-            });
+            }
+        });
 
-            album.addEventListener('mouseout', (event) => {
-                if (!event.relatedTarget || !album.contains(event.relatedTarget)) {
+        album.addEventListener('mouseout', (event) => {
+            const related = event.relatedTarget;
+            if (!related || !album.contains(related)) {
                 album.style.transform = 'scale(1)';
                 album.style.boxShadow = 'none';
-                }
-            });
+            }
         });
-    </script>
+    });
+  </script>
     <script src="album.js"></script>
     <script src="game.js"></script>
 </body>
